@@ -1,45 +1,53 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
+    <!-- Metadane: Ustawienie kodowania oraz viewport dla responsywności -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2025</title>
+
+    <!-- Link do zewnętrznego arkusza stylów CSS -->
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Skrypty JS -->
+    <script src="emoji.js" defer></script> <!-- Skrypt do obsługi emotikon -->
+    <script src="popup.js" defer></script> <!-- Skrypt do obsługi popup -->
+    <script src="showAnimation.js" defer></script> <!-- Skrypt do animacji tekstu -->
 </head>
 <body>
+    <!-- Kontener główny -->
     <div class="container">
-
-        <!-- Tekst animowany -->
+        
+        <!-- Animowany tekst z życzeniami noworocznymi -->
         <div class="animated-text">
             Szczęśliwego
             <br/>Nowego Roku 2025!!
         </div>
 
-        <!-- Przycisk i dodatkowy tekst -->
+        <!-- Sekcja z przyciskami i tekstem -->
         <div class="button-and-text">
+            <!-- Tekst, który zniknie po kliknięciu przycisku -->
             <p id="hideMe">Naciśnij przycisk!</p>
+
+            <!-- Przycisk z emotikoną 🎉 do rozpoczęcia jakiejś akcji -->
             <button class="fixed-button" id="startButton">🎉</button>
+
+            <!-- Przycisk do otwarcia popupu z życzeniami -->
             <button class="fixed-button" id="openPopup">📝</button>
         </div>
-        
-
     </div>
-      
-  <div id="popup" class="popup hidden">
-    <div class="popup-content">
-      <span id="closePopup" class="close">&times;</span>
-      <h2>Szczęśliwego Nowego Roku!</h2>
-      <p>Niech każdy dzień przynosi Ci radość, spełnienie marzeń i mnóstwo szczęścia. <br/>
-         Stwórzmy razem najlepszy rok 2025! <br/>♡♡♡</p>
+
+    <!-- Popup - ukryty na początku, pojawi się po kliknięciu -->
+    <div id="popup" class="popup hidden">
+        <!-- Zawartość popupu -->
+        <div class="popup-content">
+            <!-- Przycisk do zamknięcia popupu -->
+            <span id="closePopup" class="close">&times;</span>
+            <h2>Szczęśliwego Nowego Roku!</h2>
+            <p>Niech każdy dzień przynosi Ci radość, spełnienie marzeń i mnóstwo szczęścia. <br/>
+               Stwórzmy razem najlepszy rok 2025! <br/>♡♡♡</p>
+        </div>
     </div>
-  </div>
-
- 
-
-    <!-- Skrypty JS -->
-    <script src="emoji.js"></script>
-    <script src="popup.js"></script>
-    <script src="showAnimation.js"></script>
 
 </body>
 </html>
