@@ -115,12 +115,28 @@
     }
 }
 
+@keyframes openPopupAnimation{
+    0%{
+        color: rgba(0, 0, 0, 0);
+        height: 0px;
+    }
+
+    100%{
+        color: #000;
+        height: 100%;
+    }
+}
+
+
+
 .fixed-button {
     border-radius: 20px;
     border-style: dotted;
     border-color: #fff;
-    font-size: 40pt;
+    font-size: 30pt;
     background-color: rgba(0, 0, 0, 0);
+    padding: 10px;
+    cursor: pointer;
 }
 
 .button-and-text {
@@ -133,3 +149,64 @@ p {
     font-size: 8pt;
     padding: 10px;
 }
+
+
+/* popup */
+
+.popup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.325);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    visibility: hidden; /* Element jest niewidoczny początkowo */
+    opacity: 0; /* Przezroczystość początkowa */
+    transition: opacity 0.25s ease-out, visibility 0.25s ease-out;
+}
+  
+.popup.show {
+    visibility: visible; /* Pokazuje element */
+    opacity: 1; /* Ustawia pełną widoczność */
+  }
+
+  .popup-content {
+    font-family: 'Arial';
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.508);
+    max-width: 400px;
+    width: 60%;
+    color: #000;
+  }
+  
+  .popup-content p {
+    font-family: 'Arial';
+    font-weight: 500;
+    background: white;
+    font-size: 10pt;
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.508);    
+    color: #000;
+  }
+
+  .hidden {
+    visibility: hidden; /* Element ukryty */
+    opacity: 0;
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+  }

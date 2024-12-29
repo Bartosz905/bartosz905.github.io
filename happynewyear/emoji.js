@@ -1,7 +1,7 @@
-// Funkcja do generowania losowych emoji 🎉 w różnych miejscach na stronie
+// Funkcja do generowania losowych emoji w różnych miejscach na stronie
 function generateCelebrations() {
     const body = document.body;
-    const numCelebrations = 5; // Liczba losowych emoji 🎉, które będą na stronie w danym czasie
+    const numCelebrations = 5; // Liczba losowych emoji, które będą na stronie w danym czasie
 
     setInterval(() => {
         for (let i = 0; i < numCelebrations; i++) {
@@ -15,7 +15,7 @@ function generateCelebrations() {
             celebration.style.left = `${randomX}px`;
             celebration.style.top = `${randomY}px`;
 
-            // Dodajemy emoji 🎉 do strony
+            // Dodajemy emoji do strony
             celebration.textContent = '🎉';
             body.appendChild(celebration);
         }

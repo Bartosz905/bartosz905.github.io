@@ -11,19 +11,35 @@
 
         <!-- Tekst animowany -->
         <div class="animated-text">
-            Szczęśliwego Nowego Roku 2025!!
+            Szczęśliwego
+            <br/>Nowego Roku 2025!!
         </div>
 
         <!-- Przycisk i dodatkowy tekst -->
         <div class="button-and-text">
             <p id="hideMe">Naciśnij przycisk!</p>
             <button class="fixed-button" id="startButton">🎉</button>
+            <button class="fixed-button" id="openPopup">📝</button>
         </div>
+        
 
     </div>
+      
+  <div id="popup" class="popup hidden">
+    <div class="popup-content">
+      <span id="closePopup" class="close">&times;</span>
+      <h2>Szczęśliwego Nowego Roku!</h2>
+      <p>Niech każdy dzień przynosi Ci radość, spełnienie marzeń i mnóstwo szczęścia. <br/>
+         Stwórzmy razem najlepszy rok 2025! <br/>♡♡♡</p>
+    </div>
+  </div>
 
-    <!-- Skrypt JS -->
-    <script src="script.js"></script>
+ 
+
+    <!-- Skrypty JS -->
+    <script src="emoji.js"></script>
+    <script src="popup.js"></script>
+    <script src="showAnimation.js"></script>
 
 </body>
 </html>
